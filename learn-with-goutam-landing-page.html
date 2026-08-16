@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn With Goutam — Landing Page</title>
+<style>
+:root{
+  --bg:#07111f;--card:#0d1b2e;--card2:#10233d;--text:#f7f8fb;--muted:#a9b7c8;
+  --primary:#ffb000;--primary2:#ff7a00;--line:rgba(255,255,255,.10);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(7,17,31,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;font-size:21px}.brand span{color:var(--primary)}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:#111;font-weight:850;padding:14px 22px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--primary2));box-shadow:0 10px 28px rgba(255,151,0,.18)}
+.hero{padding:86px 0 64px;background:radial-gradient(circle at 75% 15%,rgba(255,176,0,.20),transparent 26%),radial-gradient(circle at 20% 40%,rgba(0,149,255,.12),transparent 30%)}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.badge{display:inline-block;background:rgba(255,176,0,.12);border:1px solid rgba(255,176,0,.3);color:#ffd16d;padding:7px 12px;border-radius:99px;font-size:14px;font-weight:700}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-2px;margin:18px 0}.accent{color:var(--primary)}.lead{font-size:19px;color:var(--muted);max-width:650px}
+.points{display:grid;gap:10px;margin:24px 0}.points div{color:#d9e1eb}.points b{color:#71e4a4;margin-right:8px}
+.hero-card{padding:26px;border-radius:24px;background:linear-gradient(145deg,#142944,#091525);border:1px solid var(--line);box-shadow:0 28px 70px rgba(0,0,0,.35)}
+.video{aspect-ratio:16/10;border-radius:18px;background:linear-gradient(135deg,#ffb000,#ff6500 48%,#101d32 49%);display:flex;align-items:center;justify-content:center;font-size:54px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+.author{display:flex;gap:14px;align-items:center;margin-top:20px}.avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#ffd47a,#6b3c00);display:grid;place-items:center;font-weight:900}
+section{padding:76px 0}.section-title{text-align:center;max-width:760px;margin:0 auto 42px}.section-title h2{font-size:clamp(30px,4vw,48px);line-height:1.12;margin:0 0 12px}.section-title p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:20px;padding:25px}.icon{font-size:28px;margin-bottom:12px}.card h3{margin:0 0 8px}.card p{margin:0;color:var(--muted)}
+.stats{background:#091728;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}.stat{padding:25px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat strong{display:block;font-size:30px;color:var(--primary)}.stat span{color:var(--muted);font-size:14px}
+.course{display:grid;grid-template-columns:1fr 1fr;gap:20px}.module{padding:20px;border:1px solid var(--line);border-radius:16px;background:#0b192a;display:flex;gap:16px;align-items:flex-start}.num{min-width:42px;height:42px;border-radius:12px;background:rgba(255,176,0,.14);color:var(--primary);display:grid;place-items:center;font-weight:900}
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.quote{font-size:18px}.person{margin-top:18px;color:var(--muted);font-size:14px}
+.cta{padding:72px 24px;border-radius:28px;text-align:center;background:radial-gradient(circle at top,rgba(255,176,0,.22),transparent 55%),linear-gradient(135deg,#112b48,#091323);border:1px solid var(--line)}.cta h2{font-size:clamp(32px,5vw,56px);line-height:1.08;margin:0 0 15px}.cta p{color:var(--muted);font-size:18px;max-width:650px;margin:0 auto 25px}
+footer{padding:28px 0;color:#7f8ea1;text-align:center;border-top:1px solid var(--line)}
+@media(max-width:800px){.grid,.course{grid-template-columns:1fr}.cards,.testimonials{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.hero{padding-top:55px}nav .btn{padding:10px 14px;font-size:14px}h1{letter-spacing:-1.4px}}
+</style>
+</head>
+<body>
+<nav><div class="container nav"><div class="brand">Learn with <span>Goutam</span></div><a class="btn" href="#join">Join Now</a></div></nav>
+
+<header class="hero">
+<div class="container grid">
+  <div>
+    <span class="badge">🚀 Learn • Build • Grow</span>
+    <h1>Build skills that can <span class="accent">change your future.</span></h1>
+    <p class="lead">A modern learning experience designed to help you understand practical concepts, build confidence, and take action with structured guidance.</p>
+    <div class="points"><div><b>✓</b> Beginner-friendly learning</div><div><b>✓</b> Practical modules & clear roadmap</div><div><b>✓</b> Learn at your own pace</div></div>
+    <a class="btn" href="#join">Start Learning Today →</a>
+  </div>
+  <div class="hero-card">
+    <div class="video">▶</div>
+    <div class="author"><div class="avatar">G</div><div><strong>Goutam</strong><br><span style="color:var(--muted)">Your learning guide</span></div></div>
+  </div>
+</div>
+</header>
+
+<section>
+<div class="container">
+<div class="section-title"><h2>Everything you need to <span class="accent">get started</span></h2><p>A clean, focused learning system built around practical progress instead of information overload.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">🎯</div><h3>Clear Roadmap</h3><p>Follow a structured path so you always know what to learn next.</p></div>
+<div class="card"><div class="icon">🧠</div><h3>Practical Learning</h3><p>Simple explanations and useful examples designed for real-world application.</p></div>
+<div class="card"><div class="icon">🤝</div><h3>Guidance & Support</h3><p>Stay motivated with a clear system and resources that support your progress.</p></div>
+</div>
+</div>
+</section>
+
+<section class="stats"><div class="container stats-grid">
+<div class="stat"><strong>10K+</strong><span>Community Members</span></div>
+<div class="stat"><strong>20+</strong><span>Learning Modules</span></div>
+<div class="stat"><strong>4.9/5</strong><span>Learner Rating</span></div>
+<div class="stat"><strong>24/7</strong><span>Access to Content</span></div>
+</div></section>
+
+<section>
+<div class="container">
+<div class="section-title"><h2>Your <span class="accent">learning journey</span></h2><p>Replace these modules with your actual course topics.</p></div>
+<div class="course">
+<div class="module"><div class="num">01</div><div><h3>Start with the Fundamentals</h3><p style="color:var(--muted);margin:5px 0">Build a strong foundation and understand the essential concepts.</p></div></div>
+<div class="module"><div class="num">02</div><div><h3>Learn the Core Skills</h3><p style="color:var(--muted);margin:5px 0">Move from theory into a structured practical workflow.</p></div></div>
+<div class="module"><div class="num">03</div><div><h3>Practice & Apply</h3><p style="color:var(--muted);margin:5px 0">Use exercises, examples and projects to build confidence.</p></div></div>
+<div class="module"><div class="num">04</div><div><h3>Keep Growing</h3><p style="color:var(--muted);margin:5px 0">Create a repeatable process for continued improvement.</p></div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-title"><h2>Learners love the <span class="accent">experience</span></h2></div>
+<div class="testimonials">
+<div class="card"><div class="quote">“The structure made it much easier to understand what I should focus on first.”</div><div class="person">— Student, Community Member</div></div>
+<div class="card"><div class="quote">“Clear explanations and a practical approach. I could immediately apply what I learned.”</div><div class="person">— Course Learner</div></div>
+<div class="card"><div class="quote">“A simple roadmap that helped me stop jumping between random resources.”</div><div class="person">— Community Member</div></div>
+</div>
+</div>
+</section>
+
+<section id="join"><div class="container cta">
+<h2>Ready to start your <span class="accent">journey?</span></h2>
+<p>Join the learning experience and take the next step toward building valuable skills.</p>
+<a class="btn" href="https://example.com">Join Now →</a>
+</div></section>
+
+<footer><div class="container">© 2026 Learn with Goutam. All rights reserved.</div></footer>
+</body>
+</html>
